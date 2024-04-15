@@ -12,7 +12,7 @@ public class TestJedis {
 
     public static void main(String[] args) {
         JedisShardInfo shardInfo = new JedisShardInfo("redis://47.103.155.255:6379/0");
-        shardInfo.setPassword("123");//这里是密码
+        shardInfo.setPassword("123456");//这里是密码
         Jedis jedis = new Jedis(shardInfo);
         jedis.set("name", "Jack");
         System.out.println(jedis.get("name"));
